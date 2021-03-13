@@ -9,7 +9,16 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+import { SecondsCounter } from "./component/secondsCounter.js";
 
+let value = 0;
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+setInterval(() => {
+	value++;
+	ReactDOM.render(
+		<SecondsCounter seconds={value} />,
+		document.querySelector("#app")
+	);
+}, 300);
+
+//ReactDOM.render(<Home seconds={value} />, document.querySelector("#app"));
