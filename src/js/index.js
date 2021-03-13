@@ -19,6 +19,4 @@ setInterval(() => {
 		<SecondsCounter seconds={value} />,
 		document.querySelector("#app")
 	);
-}, 300);
-
-//ReactDOM.render(<Home seconds={value} />, document.querySelector("#app"));
+}, 1000);
